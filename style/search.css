@@ -1,0 +1,146 @@
+.search-page {
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/*navbar css*/
+.navbar {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: black;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar .container-fluid .navbar-header {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar .container-fluid .navbar-header .navbar-brand {
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-collapse .nav .active a {
+    font-weight: 200;
+    color: white;
+    background-color: #272727;
+}
+
+.navbar-collapse .nav .active a:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: #272727;
+}
+
+.navbar .container-fluid .navbar-form {
+    float: right;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 0;
+}
+
+.navbar .container-fluid .navbar-form input {
+    border: none;
+    height: 30px;
+    border-radius: 0;
+}
+
+.navbar .container-fluid .navbar-form button {
+    margin-left: 3px;
+    height: 30px;
+    border: none;
+    border-radius: 0;
+}
+
+.banner {
+    width: 1000px;
+    height: 400px;
+    margin: 40px auto;
+    background: #222;
+    background-size: cover;
+    position: relative;
+}
+
+.dropdown-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.filter {
+    width: 1000px;
+    margin: 20px auto 0;
+    padding-top: 20px;
+}
+
+.filter .filter-case {
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+}
+
+.filter .filter-case .dropdown {
+    margin-right: 6px;
+}
+
+.filter .filter-case .dropdown .btn {
+    padding: 6px 18px;
+    border-radius: 0;
+}
+
+.filter .filter-search {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0;
+    float: right;
+}
+
+.filter .filter-search .navbar-collapse {
+    padding-right: 0;
+}
+
+.filter .filter-search .navbar-form {
+    padding-right: 0;
+    margin: 0;
+}
+
+.filter .filter-search .navbar-form .form-control {
+    padding: 6px 42px 6px 12px;
+}
+
+.filter .filter-search .navbar-form button {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+.clothes-table {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.clothes-table .table > thead > tr > th {
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 10px;
+}
+
+.clothes-table .table > tbody > tr > td {
+    vertical-align: middle;
+    border-top: 0;
+}
+
+.clothes-table .table .thumbnail {
+    width: 72px;
+    margin-bottom: 0;
+    border-radius: 0;
+    border-color: #ebebeb;
+    padding: 2px;
+}
+
+.page-pagination {
+    width: 228px;
+    margin: 0 auto;
+}

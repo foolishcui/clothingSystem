@@ -1,0 +1,119 @@
+body {
+    font-size: 13px;
+}
+
+.details-page {
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/*navbar css*/
+.navbar {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: black;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar .container-fluid .navbar-header {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar .container-fluid .navbar-header .navbar-brand {
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-collapse .nav .active a {
+    font-weight: 200;
+    color: white;
+    background-color: #272727;
+}
+
+.navbar-collapse .nav .active a:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: #272727;
+}
+
+.navbar .container-fluid .navbar-form {
+    float: right;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 0;
+}
+
+.navbar .container-fluid .navbar-form input {
+    border: none;
+    height: 30px;
+    border-radius: 0;
+}
+
+.navbar .container-fluid .navbar-form button {
+    margin-left: 3px;
+    height: 30px;
+    border: none;
+    border-radius: 0;
+}
+
+.pictures {
+    width: 660px;
+    margin: 40px auto 20px;
+    position: relative;
+}
+
+.pictures .thumbnail {
+    padding: 2px;
+    border-radius: 0;
+    border-color: #ebebeb;
+}
+
+.clothes-attribute-table {
+    width: 776px;
+    height: 75px;
+    margin: 20px auto;
+    background-color: #EEEEEE;
+    padding: 16px 0 16px 40px;
+}
+
+.clothes-attribute-table .contents .list {
+    display: inline-block;
+    margin-right: 125px;
+}
+
+.clothes-attribute-table .contents .list:last-child {
+    margin-right: 0;
+}
+
+.clothes-attribute-table .contents .list .first {
+    margin-bottom: 8px;
+}
+
+.clothes-attribute-table .contents .list .name {
+    color: #999999;
+}
+
+.clothes-attribute-table .contents .list .attribute {
+    color: #333;
+}
+
+.evaluation {
+    width: 780px;
+    margin: 0 auto;
+}
+
+.evaluation .name {
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+}
+
+.evaluation code {
+    padding: 3px 5px;
+    border-radius: 0;
+    color: #fff;
+    background-color: #111111;
+}

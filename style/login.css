@@ -1,0 +1,99 @@
+body {
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.head {
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    color: #fff;
+    background-color: #000;
+    position: fixed;
+}
+
+.loginBox {
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.form-signin {
+    margin: 0 auto;
+}
+
+.form-signin .form-signin-heading {
+    width: 280px;
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ffffff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ffffff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ffffff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ffffff;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-radius: 0;
+    width: 280px;
+    height: 46px;
+}
+
+.form-signin input[type="text"]::-webkit-input-placeholder {
+    color: #bcbcbc;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-radius: 0;
+    width: 280px;
+    height: 46px;
+}
+
+.form-signin input[type="password"]::-webkit-input-placeholder {
+    color: #bcbcbc;
+}
+
+.form-signin button {
+    font-size: 16px;
+    background-color: black;
+    border-radius: 0;
+    width: 280px;
+    height: 46px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-signin .form-signup {
+    width: 280px;
+    font-size: 13px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.form-signin .form-signup a {
+    color: #999999;
+}
+
+.form-signin .form-signup a:hover {
+    color: #707070;
+}
