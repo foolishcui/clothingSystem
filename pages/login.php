@@ -1,5 +1,5 @@
 <?php
-//使用 SESSION 判断用的的登录状态
+//使用 cookie 判断用的的登录状态
 if(!empty($_SESSION['id']['username'])){
     header("location:index.php");
 }

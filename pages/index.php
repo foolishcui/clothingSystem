@@ -1,8 +1,13 @@
 <?php
-//使用 SESSION 判断用的的登录状态
-if(empty($_SESSION['id']['username'])){
-    header("location:login.php");
-}
+require_once '../include.php';
+checkLogined();
+
+$type1 = '长袖衬衫';
+$type2 = '短袖衬衫';
+$type3 = '西服';
+$type4 = '夹克';
+$type5 = '西裤';
+$type6 = '休闲裤';
 ?>
 
 <!DOCTYPE html>
@@ -36,8 +41,8 @@ if(empty($_SESSION['id']['username'])){
                         <input type="text" class="form-control" placeholder="请输入关键词，如稳重" name="keyword">
                         <button type="submit" class="btn btn-default" name="submit" value="submit">搜索</button>
                     </form>
-                </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
+                </div>
+            </div>
         </nav>
 
         <div class="container type">
@@ -46,11 +51,11 @@ if(empty($_SESSION['id']['username'])){
                 <div class="col-xs－12 col-sm-4">
                     <article class="post tag-foreign-website tag-bootstrap-v3 tag-opensource-project" >
                         <h2 class="post-title">
-                            <a href="search.php" onclick="">长袖衬衫</a>
+                            <a href="" onclick="">长袖衬衫</a>
                         </h2>
                         <div class="post-featured-image">
-                            <a class="thumbnail loaded" href="search.php" onclick="">
-                                <img onload="imgLoaded(this)" src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/35760335.jpg" alt="NodeBB">
+                            <a class="thumbnail loaded" href="<?php echo "search.php?search=".$type1 ?>">
+                                <input type="image" value="长袖衬衫" src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/35760335.jpg">
                             </a>
                         </div>
                     </article>
@@ -59,11 +64,11 @@ if(empty($_SESSION['id']['username'])){
                 <div class="col-xs-12 col-sm-4">
                     <article class="post tag-foreign-website tag-bootstrap-v3">
                         <h2 class="post-title">
-                            <a onclick="" href="http://calhoun.ca/">短袖衬衫</a>
+                            <a onclick="" href="">短袖衬衫</a>
                         </h2>
                         <div class="post-featured-image">
-                            <a class="thumbnail loaded" onclick="" href="http://calhoun.ca/">
-                                <img onload="imgLoaded(this)" src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/22612504.jpg" alt="Calhoun">
+                            <a class="thumbnail loaded" onclick="" href="<?php echo "search.php?search=".$type2 ?>">
+                                <input type="image" value="短袖衬衫" name="短袖衬衫" src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/22612504.jpg">
                             </a>
                         </div>
                     </article>
@@ -72,11 +77,11 @@ if(empty($_SESSION['id']['username'])){
                 <div class="col-xs-12 col-sm-4">
                     <article class="post tag-foreign-website tag-bootstrap-v3">
                         <h2 class="post-title">
-                            <a href="https://www.justpark.com/">西服</a>
+                            <a href="">西服</a>
                         </h2>
                         <div class="post-featured-image">
-                            <a class="thumbnail loaded" href="">
-                                <img src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/75148107.jpg" alt="">
+                            <a class="thumbnail loaded" href="<?php echo "search.php?search=".$type3 ?>">
+                                <input type="image" value="西服" name="西服" src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/75148107.jpg" alt="">
                             </a>
                         </div>
                     </article>
@@ -85,11 +90,11 @@ if(empty($_SESSION['id']['username'])){
                 <div class="col-xs-12 col-sm-4">
                     <article class="post tag-foreign">
                         <h2 class="post-title">
-                            <a href="https://photoshoot.io/">夹克</a>
+                            <a href="">夹克</a>
                         </h2>
                         <div class="post-featured-image">
-                            <a class="thumbnail loaded"  href="https://photoshoot.io/">
-                                <img src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/71900589.jpg" alt="">
+                            <a class="thumbnail loaded"  href="<?php echo "search.php?search=".$type4 ?>">
+                                <input type="image" value="夹克" name="夹克" src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/71900589.jpg" alt="">
                             </a>
                         </div>
                     </article>
@@ -98,11 +103,11 @@ if(empty($_SESSION['id']['username'])){
                 <div class="col-xs-12 col-sm-4">
                     <article class="post tag-foreign">
                         <h2 class="post-title">
-                            <a  href="https://photoshoot.io/">西裤</a>
+                            <a  href="">西裤</a>
                         </h2>
                         <div class="post-featured-image">
-                            <a class="thumbnail loaded"  href="https://photoshoot.io/">
-                                <img src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/67086710.jpg" alt="">
+                            <a class="thumbnail loaded"  href="<?php echo "search.php?search=".$type5 ?>">
+                                <input type="image" value="西裤" name="西裤" src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/67086710.jpg" alt="">
                             </a>
                         </div>
                     </article>
@@ -111,11 +116,11 @@ if(empty($_SESSION['id']['username'])){
                 <div class="col-xs-12 col-sm-4">
                     <article class="post tag-foreign">
                         <h2 class="post-title">
-                            <a  href="https://photoshoot.io/">休闲裤</a>
+                            <a  href="">休闲裤</a>
                         </h2>
                         <div class="post-featured-image">
-                            <a class="thumbnail loaded" href="https://photoshoot.io/">
-                                <img src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/70628124.jpg" alt="">
+                            <a class="thumbnail loaded" href="<?php echo "search.php?search=".$type6 ?>">
+                                <input type="image" value="休闲裤" name="休闲裤" src="http://otzf8g4e3.bkt.clouddn.com/17-11-16/70628124.jpg" alt="">
                             </a>
                         </div>
                     </article>
@@ -126,4 +131,5 @@ if(empty($_SESSION['id']['username'])){
 
     </div>
 </body>
+
 </html>

@@ -22,22 +22,24 @@ if(isset($_POST["submit"])){
         //判断用户名密码输入是否正确
         $sql = "SELECT * FROM user WHERE username = '{$username}' and password = '{$password}'";
         $result = $conn->query($sql);
-        $rows = mysqli_num_rows($result);
+        $rows = $result->fetch_assoc();
         if ($rows) {
-            //设置COOKIE
-            setcookie("id", $rows['id'], time()+7*24*3600);
+            //设置COOKIE,密码不要放在COOKIE中
+            setcookie("uid", $rows['id'], time()+7*24*3600);
             setcookie("username", $rows['username'], time()+7*24*3600);
-            setcookie("password", $rows['password'], time()+7*24*3600);
 
-            //设置SESSION
-            $_SESSION['id'] = $rows['id'];
+//            设置SESSION
+//            $_SESSION['userinfo'] = [
+//                'uid' => $rows['id'],
+//                'username' => $rows['username']
+//            ];
+
+            $_SESSION['uid'] = $rows['id'];
             $_SESSION['username'] = $rows['username'];
-
-            if ($_SESSION['id']&&)
-
             header("location:./pages/index.php");
 
-            //检查COOKIE是否保存成功,要到下一页才可以查看
+//            if (!empty($_SESSION['id']) || !empty($_SESSION['id']['username'])) {}
+//            检查COOKIE是否保存成功,要到下一页才可以查看
         } else {
             echo "<script>
             alert('用户名或密码错误');

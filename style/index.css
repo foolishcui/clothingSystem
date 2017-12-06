@@ -66,8 +66,8 @@ body {
     margin-top: 30px;
 }
 
-.type .col-sm-4 {
-
+.type .thumbnail-input {
+    display: none;
 }
 
 .homepage .type .post {
@@ -114,6 +114,21 @@ body {
     width: 240px;
     top: 0;
     left: 0
+}
+
+.post-featured-image .thumbnail input {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.post-featured-image .thumbnail.loaded input {
+    opacity: 1;
+}
+
+.post input {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .post-featured-image .thumbnail img {
