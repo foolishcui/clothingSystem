@@ -177,6 +177,7 @@ setcookie('clothingType', $_GET['search']);
                 document.getElementById("selectColor").innerHTML = $(this).text() + ' <span class="caret"></span>';
                 if ($(this).text() == "全部") {
                     colorValue = 'all';
+                    console.log(colorValue);
                 } else {
                     colorValue = $(this).text();
                 }
