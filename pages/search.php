@@ -58,13 +58,14 @@ setcookie('clothingType', $_GET['search']);
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu color-menu" aria-labelledby="dropdownMenu1" onchange="goPick()">
-                        <li><a href="#" id="khaki">卡其</a></li>
-                        <li><a href="#" id="borland">宝蓝</a></li>
-                        <li><a href="#" id="darkBlue">藏青</a></li>
-                        <li><a href="#" id="black">黑色</a></li>
-                        <li><a href="#" id="blue grey">蓝灰</a></li>
-                        <li><a href="#" id="purplishBlue">藏蓝</a></li>
-                        <li><a href="#" id="otherColor">全部</a></li>
+                        <li><a href="#">蓝</a></li>
+                        <li><a href="#">青</a></li>
+                        <li><a href="#">黑</a></li>
+                        <li><a href="#">灰</a></li>
+                        <li><a href="#">紫</a></li>
+                        <li><a href="#">粉</a></li>
+                        <li><a href="#">卡其</a></li>
+                        <li><a href="#">全部</a></li>
                     </ul>
                 </div>
 
@@ -74,12 +75,13 @@ setcookie('clothingType', $_GET['search']);
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu fabric-menu" aria-labelledby="dropdownMenu1" oninput="goPick(this)">
-                        <li><a href="#" id="polyester">聚酯纤维</a></li>
-                        <li><a href="#" id="woolasd">羊毛</a></li>
-                        <li><a href="#" id="cotton">棉</a></li>
-                        <li><a href="#" id="chinlon">锦纶</a></li>
-                        <li><a href="#" id="spandex">氨纶</a></li>
-                        <li><a href="#" id="otherFabric">全部</a></li>
+                        <li><a href="#">棉</a></li>
+                        <li><a href="#">羊毛</a></li>
+                        <li><a href="#">锦纶</a></li>
+                        <li><a href="#">氨纶</a></li>
+                        <li><a href="#">聚酯纤维</a></li>
+                        <li><a href="#">再生纤维</a></li>
+                        <li><a href="#">全部</a></li>
                     </ul>
                 </div>
 
@@ -89,11 +91,12 @@ setcookie('clothingType', $_GET['search']);
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu style-menu" aria-labelledby="dropdownMenu1" oninput="goPick()">
-                        <li><a href="#" id="business">商务</a></li>
-                        <li><a href="#" id="city">都市</a></li>
-                        <li><a href="#" id="relaxation">休闲</a></li>
-                        <li><a href="#" id="fashion">时尚</a></li>
-                        <li><a href="#" id="otherStyle">全部</a></li>
+                        <li><a href="#">商务</a></li>
+                        <li><a href="#">都市</a></li>
+                        <li><a href="#">休闲</a></li>
+                        <li><a href="#">时尚</a></li>
+                        <li><a href="#">青春</a></li>
+                        <li><a href="#">全部</a></li>
                     </ul>
                 </div>
             </div>
@@ -118,14 +121,14 @@ setcookie('clothingType', $_GET['search']);
                 <tbody class='clothes-contents' id='clothes-contents'>
                     <!--展示该分类下的所有服装-->
                     <?php
-                        if ($_GET['search'] == '夹克') {
-                            $type = $_GET['search'];
+                        if ($_GET['search'] == '夹克' || $_GET['search'] == '西服') {
+                            $type = "jacket_jinlilai";
                             $sql = "SELECT * FROM jacket_jinlilai";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     echo "<tr><td>{$row['id']}</td>" .
-                                         "<td><a href='details.php?id={$row['id']}' class='thumbnail'><img src='{$row['image1']}' alt=''></a></td>" .
+                                         "<td><a href='details.php?id={$row['id']}&table=$type' class='thumbnail'><img src='{$row['image1']}' alt=''></a></td>" .
                                          "<td>{$row['color']}</td>" .
                                          "<td>{$row['fabric']}</td>" .
                                          "<td>{$row['style']}</td>" .
@@ -134,7 +137,70 @@ setcookie('clothingType', $_GET['search']);
                             } else {
                                 echo "抱歉，没有帮您找到符合要求的男装。";
                             }
-                            mysqli_close($conn);
+                        } else if ($_GET['search'] == '长袖衬衫') {
+                            $type = "long_sleeved_blouse";
+                            $sql = "SELECT * FROM long_sleeved_blouse";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr><td>{$row['id']}</td>" .
+                                        "<td><a href='details.php?id={$row['id']}&table=$type' class='thumbnail'><img src='{$row['image1']}' alt=''></a></td>" .
+                                        "<td>{$row['color']}</td>" .
+                                        "<td>{$row['fabric']}</td>" .
+                                        "<td>{$row['style']}</td>" .
+                                        "</tr>";
+                                }
+                            } else {
+                                echo "抱歉，没有帮您找到符合要求的男装。";
+                            }
+                        } else if ($_GET['search'] == '短袖衬衫') {
+                            $type = "short_sleeved_blouse";
+                            $sql = "SELECT * FROM short_sleeved_blouse";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr><td>{$row['id']}</td>" .
+                                        "<td><a href='details.php?id={$row['id']}&table=$type' class='thumbnail'><img src='{$row['image1']}' alt=''></a></td>" .
+                                        "<td>{$row['color']}</td>" .
+                                        "<td>{$row['fabric']}</td>" .
+                                        "<td>{$row['style']}</td>" .
+                                        "</tr>";
+                                }
+                            } else {
+                                echo "抱歉，没有帮您找到符合要求的男装。";
+                            }
+                        } else if ($_GET['search'] == '西裤') {
+                            $type = "western_style_pants";
+                            $sql = "SELECT * FROM western_style_pants";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr><td>{$row['id']}</td>" .
+                                        "<td><a href='details.php?id={$row['id']}&table=$type' class='thumbnail'><img src='{$row['image1']}' alt=''></a></td>" .
+                                        "<td>{$row['color']}</td>" .
+                                        "<td>{$row['fabric']}</td>" .
+                                        "<td>{$row['style']}</td>" .
+                                        "</tr>";
+                                }
+                            } else {
+                                echo "抱歉，没有帮您找到符合要求的男装。";
+                            }
+                        } else if ($_GET['search'] == '休闲裤') {
+                            $type = "casual_pants";
+                            $sql = "SELECT * FROM casual_pants";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr><td>{$row['id']}</td>" .
+                                        "<td><a href='details.php?id={$row['id']}&table=$type' class='thumbnail'><img src='{$row['image1']}' alt=''></a></td>" .
+                                        "<td>{$row['color']}</td>" .
+                                        "<td>{$row['fabric']}</td>" .
+                                        "<td>{$row['style']}</td>" .
+                                        "</tr>";
+                                }
+                            } else {
+                                echo "抱歉，没有帮您找到符合要求的男装。";
+                            }
                         }
                     ?>
                 </tbody>

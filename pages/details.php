@@ -45,35 +45,44 @@ include('../connectMysql.php');
     <!--展示该衣服的6张细节图-->
     <?php
         $clotheId = $_GET['id'];
-        if ($_COOKIE['clothingType'] = '夹克') {
-            $sql = "SELECT * FROM jacket_jinlilai WHERE id = '{$clotheId}'";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    //查询衣服图片
-                    echo "<div class='pictures'><div class='row'><div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image1']}' alt=''></a></div>".
-                         "<div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image2']}' alt=''></a></div>".
-                         "<div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image3']}' alt=''></a></div></div>".
-                         "<div class='row'><div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image4']}' alt=''></a></div>".
-                         "<div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image5']}' alt=''></a></div>".
-                         "<div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image6']}' alt=''></a></div></div></div>";
-                    //查询衣服的具体参数
+        $table = $_GET['table'];
+        $sql = "SELECT * FROM $table WHERE id = '{$clotheId}'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                //查询衣服图片
+                echo "<div class='pictures'><div class='row'><div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image1']}' alt=''></a></div>".
+                     "<div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image2']}' alt=''></a></div>".
+                     "<div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image3']}' alt=''></a></div></div>".
+                     "<div class='row'><div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image4']}' alt=''></a></div>".
+                     "<div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image5']}' alt=''></a></div>".
+                     "<div class='col-md-4 col-sm-4'><a href='#' class='thumbnail'><img src='{$row['image6']}' alt=''></a></div></div></div>";
+                //查询衣服的具体参数
+                if ($table == 'western_style_pants' || $table == 'casual_pants') {
+                    echo "<div class='clothes-attribute-table'><div class='contents'><div class='list'><div class='first'><span class='name'>裤长：</span><span class='attribute'>{$row['pant_length']}</span><br></div>".
+                        "<div class='second'><span class='name'>腰型：</span><span class='attribute'>{$row['waist_type']}</span><br></div></div>".
+                        "<div class='list'><div class='first'><span class='name'>款式：</span><span class='attribute'>{$row['design']}</span><br></div>".
+                        "<div class='second'><span class='name'>裤脚：</span><span class='attribute'>{$row['pant_bottom']}</span><br></div></div>".
+                        "<div class='list'><div class='first'><span class='name'>裤型：</span><span class='attribute'>{$row['model']}</span><br></div>".
+                        "<div class='second'><span class='name'>弹力：</span><span class='attribute'>{$row['elastic_force']}</span><br></div></div>".
+                        "<div class='list'><div class='first'><span class='name'>工艺：</span><span class='attribute'>{$row['craft']}</span><br></div>".
+                        "<div class='second'><span class='name'>图案：</span><span class='attribute'>{$row['pattern']}</span><br></div></div></div></div>";
+                } else {
                     echo "<div class='clothes-attribute-table'><div class='contents'><div class='list'><div class='first'><span class='name'>袖长：</span><span class='attribute'>{$row['sleeve_length']}</span><br></div>".
-                         "<div class='second'><span class='name'>领型：</span><span class='attribute'>{$row['collar_type']}</span><br></div></div>".
-                         "<div class='list'><div class='first'><span class='name'>款式：</span><span class='attribute'>{$row['design']}</span><br></div>".
-                         "<div class='second'><span class='name'>袖型：</span><span class='attribute'>{$row['sleeve_style']}</span><br></div></div>".
-                         "<div class='list'><div class='first'><span class='name'>版型：</span><span class='attribute'>{$row['model']}</span><br></div>".
-                         "<div class='second'><span class='name'>下摆：</span><span class='attribute'>{$row['lower_hem']}</span><br></div></div>".
-                         "<div class='list'><div class='first'><span class='name'>工艺：</span><span class='attribute'>{$row['craft']}</span><br></div>".
-                         "<div class='second'><span class='name'>图案：</span><span class='attribute'>{$row['pattern']}</span><br></div></div></div></div>";
-                    //感性评价
-                    echo "<div class='evaluation'>感性评价：<code class='comment'>舒适</code> ".
-                         "<code class='comment'>{$row['style']}</code></div>";
+                        "<div class='second'><span class='name'>领型：</span><span class='attribute'>{$row['collar_type']}</span><br></div></div>".
+                        "<div class='list'><div class='first'><span class='name'>款式：</span><span class='attribute'>{$row['design']}</span><br></div>".
+                        "<div class='second'><span class='name'>袖型：</span><span class='attribute'>{$row['sleeve_style']}</span><br></div></div>".
+                        "<div class='list'><div class='first'><span class='name'>版型：</span><span class='attribute'>{$row['model']}</span><br></div>".
+                        "<div class='second'><span class='name'>下摆：</span><span class='attribute'>{$row['lower_hem']}</span><br></div></div>".
+                        "<div class='list'><div class='first'><span class='name'>工艺：</span><span class='attribute'>{$row['craft']}</span><br></div>".
+                        "<div class='second'><span class='name'>图案：</span><span class='attribute'>{$row['pattern']}</span><br></div></div></div></div>";
                 }
+                //感性评价
+                echo "<div class='evaluation'>感性评价：<code class='comment'>舒适</code> ".
+                     "<code class='comment'>{$row['style']}</code></div>";
             }
         }
     ?>
-
 </div>
 </body>
 </html>
