@@ -31,7 +31,7 @@ $type6 = '休闲裤';
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">基于感性工学的服装设计评价系统</a>
+                    <a class="navbar-brand" href="selectSystem.php">基于感性工学的服装设计评价系统</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">

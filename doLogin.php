@@ -36,7 +36,7 @@ if(isset($_POST["submit"])){
 
             $_SESSION['uid'] = $rows['id'];
             $_SESSION['username'] = $rows['username'];
-            header("location:./pages/index.php");
+            header("location:./pages/selectSystem.php");
 
 //            if (!empty($_SESSION['id']) || !empty($_SESSION['id']['username'])) {}
 //            检查COOKIE是否保存成功,要到下一页才可以查看
