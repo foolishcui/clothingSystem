@@ -20,18 +20,13 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
 
 <body>
 <div class="container-fluid">
-    <!--Header-->
-    <div class="head">
-        <div class="logo" href="#"></div>
-        <span class="system_name">商务男装感性评价系统</span>
-    </div>
 
     <!--Login Box-->
     <div class="loginBox">
         <form class="form-signin" action="../doSignup.php" method="post">
-            <h2 class="form-signin-heading">商务男装感性评价系统</h2>
+            <h2 class="form-signin-heading">基于感性工学的服装设计虚拟展演与评价系统</h2>
             <label for="inputAccount" class="sr-only">姓名</label>
-            <input type="text" name="username" id="inputAccount" class="form-control" placeholder="姓名" required autofocus>
+            <input type="text" name="username" id="inputAccount" class="form-control" placeholder="姓名" required autofocus style="margin-bottom: 10px;">
             <label class="radio-inline">
                 <input type="radio" name="male" id="inputMale" value="male"> 男
             </label>
@@ -45,7 +40,7 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
             <label for="inputPassword" class="sr-only">密码</label>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit">注册</button>
-            <a class="form-signup" href="login.php">已有账号，前去登录</a>
+            <div class="form-signup"><a href="login.php">已有账号，前去登陆</a></div>
         </form>
     </div>
 </div>

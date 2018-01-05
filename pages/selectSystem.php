@@ -42,7 +42,7 @@ checkLogined();
             <div class="system">
                 <article class="post tag-foreign-website tag-bootstrap-v3 tag-opensource-project">
                     <h2 class="post-title">
-                        <a href="" onclick="">服装设计知识库</a>
+                        <a href="index.php" onclick="">服装设计知识库</a>
                     </h2>
                     <div class="post-featured-image">
                         <a class="thumbnail loaded" href="index.php">
@@ -54,7 +54,7 @@ checkLogined();
             <div class="system">
                 <article class="post tag-foreign-website tag-bootstrap-v3">
                     <h2 class="post-title">
-                        <a onclick="" href="">服装设计虚拟展演与评价</a>
+                        <a onclick="" href="videoIndex.php">服装设计虚拟展演与评价</a>
                     </h2>
                     <div class="post-featured-image">
                         <a class="thumbnail loaded" onclick="" href="videoIndex.php">

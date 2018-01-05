@@ -25,6 +25,7 @@ checkLogined();
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
+                <a class="navbar-brand" href="videoIndex.php">基于感性工学的服装设计虚拟展演系统</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
