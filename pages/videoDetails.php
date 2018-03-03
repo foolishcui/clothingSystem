@@ -43,6 +43,8 @@ checkLogined();
         <video src="../videos/1.mp4" autoplay loop="loop" width="1000px;"></video>
     </div>
 
+    <div class="clothes-attribute-table"><div class="contents"><div class="list"><div class="first"><span class="name">袖长：</span><span class="attribute">长袖</span><br></div><div class="second"><span class="name">领型：</span><span class="attribute">翻领</span><br></div></div><div class="list"><div class="first"><span class="name">款式：</span><span class="attribute">暗纹提花</span><br></div><div class="second"><span class="name">袖型：</span><span class="attribute"></span><br></div></div><div class="list"><div class="first"><span class="name">版型：</span><span class="attribute">标准</span><br></div><div class="second"><span class="name">下摆：</span><span class="attribute"></span><br></div></div><div class="list"><div class="first"><span class="name">工艺：</span><span class="attribute">防风抗皱/挡风保暖</span><br></div><div class="second"><span class="name">图案：</span><span class="attribute">暗纹提花</span><br></div></div></div></div>
+
     <!--添加感性评价调查功能-->
     <div class="container-fluid questions">
         <h3>产品评价</h3>

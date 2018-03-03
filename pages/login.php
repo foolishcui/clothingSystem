@@ -29,7 +29,7 @@ if(!empty($_SESSION['id']['username'])){
             <!-- 调用doLogin.php文件，验证，存取COOKIE和SESSION -->
             <form class="form-signin" action="../doLogin.php" method="post">
                 <h2 class="form-signin-heading">基于感性工学的服装设计虚拟展演与评价系统</h2>
-<!--                <p class="form-signin-tips">账号：admin 密码：admin</p>-->
+                <!--<p class="form-signin-tips">账号：admin 密码：admin</p>-->
                 <label for="inputAccount" class="sr-only">账号: admin</label>
                 <input type="text" name="username" id="inputAccount" class="form-control" placeholder="账号: admin" required autofocus>
                 <label for="inputPassword" class="sr-only">密码: admin</label>
