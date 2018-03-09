@@ -43,7 +43,7 @@
       <file leaf-file-name="evaluationDetails.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/evaluationDetails.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="309">
               <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -339,12 +339,12 @@
       <workItem from="1519965708639" duration="9204000" />
       <workItem from="1520433500468" duration="4674000" />
       <workItem from="1520481535968" duration="24045000" />
-      <workItem from="1520575365108" duration="16359000" />
+      <workItem from="1520575365108" duration="16490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370070000" />
+    <option name="totallyTimeSpent" value="370201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -739,7 +739,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/evaluationDetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="309">
           <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />

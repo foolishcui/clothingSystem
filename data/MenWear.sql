@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.26)
 # Database: MenWear
-# Generation Time: 2018-03-03 07:24:25 +0000
+# Generation Time: 2018-03-09 17:33:35 +0000
 # ************************************************************
 
 
@@ -64,6 +64,153 @@ VALUES
 	(8,'../assets/casual_pants/8/img1.png','../assets/casual_pants/8/img2.png','../assets/casual_pants/8/img3.png','../assets/casual_pants/8/img4.png',NULL,NULL,'长裤','宽松','棉100%','深灰','纯色','常规','商务绅士','https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-14902430362.139.71e8ae193LbPMs&id=558873328018&rn=d3132b4f1de18f14d4b85961839f6e12&abbucket=10',NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `casual_pants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table evaluation_clothes
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `evaluation_clothes`;
+
+CREATE TABLE `evaluation_clothes` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `imageType` char(20) DEFAULT NULL,
+  `imageNumer` char(11) DEFAULT NULL,
+  `imageAddress` char(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `evaluation_clothes` WRITE;
+/*!40000 ALTER TABLE `evaluation_clothes` DISABLE KEYS */;
+
+INSERT INTO `evaluation_clothes` (`id`, `imageType`, `imageNumer`, `imageAddress`)
+VALUES
+	(1,'four_suit','1','http://otzf8g4e3.bkt.clouddn.com/18-3-9/34148922.jpg'),
+	(2,'four_suit','2','http://otzf8g4e3.bkt.clouddn.com/18-3-9/81426975.jpg'),
+	(3,'four_suit','3','http://otzf8g4e3.bkt.clouddn.com/18-3-9/50772936.jpg'),
+	(4,'four_suit','4','http://otzf8g4e3.bkt.clouddn.com/18-3-9/22722816.jpg'),
+	(5,'four_suit','5','http://otzf8g4e3.bkt.clouddn.com/18-3-9/7417238.jpg'),
+	(6,'four_suit','6','http://otzf8g4e3.bkt.clouddn.com/18-3-9/4545335.jpg'),
+	(7,'four_suit','7','http://otzf8g4e3.bkt.clouddn.com/18-3-9/42019163.jpg'),
+	(8,'four_suit','8','http://otzf8g4e3.bkt.clouddn.com/18-3-9/35187558.jpg'),
+	(9,'four_suit','9','http://otzf8g4e3.bkt.clouddn.com/18-3-9/66323021.jpg'),
+	(10,'four_suit','10','http://otzf8g4e3.bkt.clouddn.com/18-3-9/53129154.jpg'),
+	(11,'four_suit','11','http://otzf8g4e3.bkt.clouddn.com/18-3-9/95920997.jpg'),
+	(12,'four_suit','12','http://otzf8g4e3.bkt.clouddn.com/18-3-9/70058465.jpg'),
+	(13,'four_suit','13','http://otzf8g4e3.bkt.clouddn.com/18-3-9/41790096.jpg'),
+	(14,'six_suit','1','http://otzf8g4e3.bkt.clouddn.com/18-3-9/69098687.jpg'),
+	(15,'six_suit','2','http://otzf8g4e3.bkt.clouddn.com/18-3-9/85078350.jpg'),
+	(16,'six_suit','3','http://otzf8g4e3.bkt.clouddn.com/18-3-9/77685021.jpg'),
+	(17,'six_suit','4','http://otzf8g4e3.bkt.clouddn.com/18-3-9/40681661.jpg'),
+	(18,'six_suit','5','http://otzf8g4e3.bkt.clouddn.com/18-3-9/54300282.jpg'),
+	(19,'six_suit','6','http://otzf8g4e3.bkt.clouddn.com/18-3-9/85258505.jpg'),
+	(20,'six_suit','7','http://otzf8g4e3.bkt.clouddn.com/18-3-9/94606907.jpg'),
+	(21,'six_suit','8','http://otzf8g4e3.bkt.clouddn.com/18-3-9/52646091.jpg'),
+	(22,'six_suit','9','http://otzf8g4e3.bkt.clouddn.com/18-3-9/40454451.jpg'),
+	(23,'six_suit','10','http://otzf8g4e3.bkt.clouddn.com/18-3-9/57400915.jpg'),
+	(24,'six_suit','11','http://otzf8g4e3.bkt.clouddn.com/18-3-9/79889974.jpg'),
+	(25,'six_suit','12','http://otzf8g4e3.bkt.clouddn.com/18-3-9/37775260.jpg'),
+	(26,'six_suit','13','http://otzf8g4e3.bkt.clouddn.com/18-3-9/53360790.jpg'),
+	(27,'eight_suit','1','http://otzf8g4e3.bkt.clouddn.com/18-3-9/33610606.jpg'),
+	(28,'eight_suit','2','http://otzf8g4e3.bkt.clouddn.com/18-3-9/99803849.jpg'),
+	(29,'eight_suit','3','http://otzf8g4e3.bkt.clouddn.com/18-3-9/16780472.jpg'),
+	(30,'eight_suit','4','http://otzf8g4e3.bkt.clouddn.com/18-3-9/42959450.jpg'),
+	(31,'eight_suit','5','http://otzf8g4e3.bkt.clouddn.com/18-3-9/37680609.jpg'),
+	(32,'eight_suit','6','http://otzf8g4e3.bkt.clouddn.com/18-3-9/11286678.jpg'),
+	(33,'eight_suit','7','http://otzf8g4e3.bkt.clouddn.com/18-3-9/93184791.jpg'),
+	(34,'eight_suit','8','http://otzf8g4e3.bkt.clouddn.com/18-3-9/62067299.jpg'),
+	(35,'eight_suit','9','http://otzf8g4e3.bkt.clouddn.com/18-3-9/13986872.jpg'),
+	(36,'eight_suit','10','http://otzf8g4e3.bkt.clouddn.com/18-3-9/44947273.jpg'),
+	(37,'eight_suit','11','http://otzf8g4e3.bkt.clouddn.com/18-3-9/59630644.jpg'),
+	(38,'eight_suit','12','http://otzf8g4e3.bkt.clouddn.com/18-3-9/11278148.jpg'),
+	(39,'eight_suit','13','http://otzf8g4e3.bkt.clouddn.com/18-3-9/63263516.jpg'),
+	(40,'shirt','1','http://otzf8g4e3.bkt.clouddn.com/18-3-9/62499277.jpg'),
+	(41,'shirt','2','http://otzf8g4e3.bkt.clouddn.com/18-3-9/91996417.jpg'),
+	(42,'shirt','3','http://otzf8g4e3.bkt.clouddn.com/18-3-9/61687784.jpg'),
+	(43,'shirt','4','http://otzf8g4e3.bkt.clouddn.com/18-3-9/1629274.jpg'),
+	(44,'shirt','5','http://otzf8g4e3.bkt.clouddn.com/18-3-9/96883084.jpg'),
+	(45,'shirt','6','http://otzf8g4e3.bkt.clouddn.com/18-3-9/79333703.jpg'),
+	(46,'shirt','7','http://otzf8g4e3.bkt.clouddn.com/18-3-9/17965563.jpg'),
+	(47,'shirt','8','http://otzf8g4e3.bkt.clouddn.com/18-3-9/65287996.jpg'),
+	(48,'shirt','9','http://otzf8g4e3.bkt.clouddn.com/18-3-9/61176526.jpg'),
+	(49,'shirt','10','http://otzf8g4e3.bkt.clouddn.com/18-3-9/22408683.jpg'),
+	(50,'shirt','11','http://otzf8g4e3.bkt.clouddn.com/18-3-9/5454908.jpg'),
+	(51,'shirt','12','http://otzf8g4e3.bkt.clouddn.com/18-3-9/73797286.jpg'),
+	(52,'shirt','13','http://otzf8g4e3.bkt.clouddn.com/18-3-9/34109941.jpg'),
+	(53,'shirt','14','http://otzf8g4e3.bkt.clouddn.com/18-3-9/48649430.jpg'),
+	(54,'shirt','15','http://otzf8g4e3.bkt.clouddn.com/18-3-9/10061739.jpg'),
+	(55,'shirt','16','http://otzf8g4e3.bkt.clouddn.com/18-3-9/75184345.jpg'),
+	(56,'shirt','17','http://otzf8g4e3.bkt.clouddn.com/18-3-9/21873066.jpg'),
+	(57,'shirt','18','http://otzf8g4e3.bkt.clouddn.com/18-3-9/87537337.jpg'),
+	(58,'shirt','19','http://otzf8g4e3.bkt.clouddn.com/18-3-9/55111124.jpg'),
+	(59,'jack1','1','http://otzf8g4e3.bkt.clouddn.com/18-3-9/1542838.jpg'),
+	(60,'jack1','2','http://otzf8g4e3.bkt.clouddn.com/18-3-9/70554621.jpg'),
+	(61,'jack1','3','http://otzf8g4e3.bkt.clouddn.com/18-3-9/18661387.jpg'),
+	(62,'jack1','4','http://otzf8g4e3.bkt.clouddn.com/18-3-9/81190235.jpg'),
+	(63,'jack1','5','http://otzf8g4e3.bkt.clouddn.com/18-3-9/68920303.jpg'),
+	(64,'jack1','6','http://otzf8g4e3.bkt.clouddn.com/18-3-9/51846814.jpg'),
+	(65,'jack1','7','http://otzf8g4e3.bkt.clouddn.com/18-3-9/72873195.jpg'),
+	(66,'jack1','8','http://otzf8g4e3.bkt.clouddn.com/18-3-9/21334874.jpg'),
+	(67,'jack1','9','http://otzf8g4e3.bkt.clouddn.com/18-3-9/9038715.jpg'),
+	(68,'jack1','10','http://otzf8g4e3.bkt.clouddn.com/18-3-9/86610068.jpg'),
+	(69,'jack1','11','http://otzf8g4e3.bkt.clouddn.com/18-3-9/13017868.jpg'),
+	(70,'jack1','12','http://otzf8g4e3.bkt.clouddn.com/18-3-9/51846814.jpg'),
+	(71,'jack1','13','http://otzf8g4e3.bkt.clouddn.com/18-3-9/56323154.jpg'),
+	(72,'jack1','14','http://otzf8g4e3.bkt.clouddn.com/18-3-9/56101890.jpg'),
+	(73,'jack1','15','http://otzf8g4e3.bkt.clouddn.com/18-3-9/55416179.jpg'),
+	(74,'jack1','16','http://otzf8g4e3.bkt.clouddn.com/18-3-9/55416179.jpg'),
+	(75,'jack1','17','http://otzf8g4e3.bkt.clouddn.com/18-3-9/12869612.jpg'),
+	(76,'jack2','1','http://otzf8g4e3.bkt.clouddn.com/18-3-9/22364158.jpg'),
+	(77,'jack2','2','http://otzf8g4e3.bkt.clouddn.com/18-3-9/82628053.jpg'),
+	(78,'jack2','3','http://otzf8g4e3.bkt.clouddn.com/18-3-9/88164853.jpg'),
+	(79,'jack2','4','http://otzf8g4e3.bkt.clouddn.com/18-3-9/24479152.jpg'),
+	(80,'jack2','5','http://otzf8g4e3.bkt.clouddn.com/18-3-9/57457402.jpg'),
+	(81,'jack2','6','http://otzf8g4e3.bkt.clouddn.com/18-3-9/17265144.jpg'),
+	(82,'jack2','7','http://otzf8g4e3.bkt.clouddn.com/18-3-9/52860147.jpg'),
+	(83,'jack2','8','http://otzf8g4e3.bkt.clouddn.com/18-3-9/76492606.jpg'),
+	(84,'jack2','9','http://otzf8g4e3.bkt.clouddn.com/18-3-9/9157228.jpg'),
+	(85,'jack2','10','http://otzf8g4e3.bkt.clouddn.com/18-3-9/79280905.jpg'),
+	(86,'jack2','11','http://otzf8g4e3.bkt.clouddn.com/18-3-9/28720827.jpg'),
+	(87,'jack2','12','http://otzf8g4e3.bkt.clouddn.com/18-3-9/35718137.jpg'),
+	(88,'jack2','13','http://otzf8g4e3.bkt.clouddn.com/18-3-9/60889210.jpg'),
+	(89,'jack2','14','http://otzf8g4e3.bkt.clouddn.com/18-3-9/22155295.jpg'),
+	(90,'jack2','15','http://otzf8g4e3.bkt.clouddn.com/18-3-9/58287301.jpg'),
+	(91,'jack2','16','http://otzf8g4e3.bkt.clouddn.com/18-3-9/82052738.jpg'),
+	(92,'jack2','17','http://otzf8g4e3.bkt.clouddn.com/18-3-9/82614729.jpg'),
+	(93,'trousers','1','http://otzf8g4e3.bkt.clouddn.com/18-3-9/34010566.jpg'),
+	(94,'trousers','2','http://otzf8g4e3.bkt.clouddn.com/18-3-9/57832828.jpg'),
+	(95,'trousers','3','http://otzf8g4e3.bkt.clouddn.com/18-3-9/1885008.jpg'),
+	(96,'trousers','4','http://otzf8g4e3.bkt.clouddn.com/18-3-9/3082818.jpg'),
+	(97,'trousers','5','http://otzf8g4e3.bkt.clouddn.com/18-3-9/39348317.jpg'),
+	(98,'trousers','6','http://otzf8g4e3.bkt.clouddn.com/18-3-9/76507275.jpg'),
+	(99,'trousers','7','http://otzf8g4e3.bkt.clouddn.com/18-3-9/55903124.jpg'),
+	(100,'trousers','8','http://otzf8g4e3.bkt.clouddn.com/18-3-9/72262828.jpg'),
+	(101,'trousers','9','http://otzf8g4e3.bkt.clouddn.com/18-3-9/59830796.jpg'),
+	(102,'trousers','10','http://otzf8g4e3.bkt.clouddn.com/18-3-9/57543139.jpg'),
+	(103,'trousers','11','http://otzf8g4e3.bkt.clouddn.com/18-3-9/60863781.jpg'),
+	(104,'trousers','12','http://otzf8g4e3.bkt.clouddn.com/18-3-9/35662005.jpg'),
+	(105,'trousers','13','http://otzf8g4e3.bkt.clouddn.com/18-3-9/32683469.jpg'),
+	(106,'trousers','14','http://otzf8g4e3.bkt.clouddn.com/18-3-9/72672897.jpg'),
+	(107,'trousers','15','http://otzf8g4e3.bkt.clouddn.com/18-3-9/87900937.jpg'),
+	(108,'casual_pants','1','http://otzf8g4e3.bkt.clouddn.com/18-3-9/91722.jpg'),
+	(109,'casual_pants','2','http://otzf8g4e3.bkt.clouddn.com/18-3-9/13923961.jpg'),
+	(110,'casual_pants','3','http://otzf8g4e3.bkt.clouddn.com/18-3-9/58265199.jpg'),
+	(111,'casual_pants','4','http://otzf8g4e3.bkt.clouddn.com/18-3-9/97479288.jpg'),
+	(112,'casual_pants','5','http://otzf8g4e3.bkt.clouddn.com/18-3-9/95967827.jpg'),
+	(113,'casual_pants','6','http://otzf8g4e3.bkt.clouddn.com/18-3-9/50660812.jpg'),
+	(114,'casual_pants','7','http://otzf8g4e3.bkt.clouddn.com/18-3-9/19258044.jpg'),
+	(115,'casual_pants','8','http://otzf8g4e3.bkt.clouddn.com/18-3-9/3466324.jpg'),
+	(116,'casual_pants','9','http://otzf8g4e3.bkt.clouddn.com/18-3-9/66428475.jpg'),
+	(117,'casual_pants','10','http://otzf8g4e3.bkt.clouddn.com/18-3-9/8545375.jpg'),
+	(118,'casual_pants','11','http://otzf8g4e3.bkt.clouddn.com/18-3-9/39381208.jpg'),
+	(125,'casual_pants','12','http://otzf8g4e3.bkt.clouddn.com/18-3-9/78783106.jpg'),
+	(126,'casual_pants','13','http://otzf8g4e3.bkt.clouddn.com/18-3-9/99310475.jpg'),
+	(127,'casual_pants','14','http://otzf8g4e3.bkt.clouddn.com/18-3-9/31231758.jpg'),
+	(128,'casual_pants','15','http://otzf8g4e3.bkt.clouddn.com/18-3-9/85090712.jpg'),
+	(129,'casual_pants','16','http://otzf8g4e3.bkt.clouddn.com/18-3-9/50609548.jpg'),
+	(130,'casual_pants','17','http://otzf8g4e3.bkt.clouddn.com/18-3-9/38179496.jpg');
+
+/*!40000 ALTER TABLE `evaluation_clothes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -284,6 +431,8 @@ UNLOCK TABLES;
 
 # Dump of table western_style_pants
 # ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `western_style_pants`;
 
 CREATE TABLE `western_style_pants` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
