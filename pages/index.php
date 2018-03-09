@@ -1,6 +1,6 @@
 <?php
 require_once '../include.php';
-checkLogined();
+//checkLogined();
 
 $type1 = '长袖衬衫';
 $type2 = '短袖衬衫';

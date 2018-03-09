@@ -71,6 +71,11 @@ body {
     border-color: #ebebeb;
 }
 
+.pictures h4 {
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+
 .clothes-attribute-table {
     width: 880px;
     height: 75px;
@@ -149,9 +154,18 @@ body {
     margin: 10px 20px 40px;
 }
 
-.video {
+.clothe {
     width: 1000px;
     position: relative;
     margin: 0 auto;
     margin-top: 30px;
+    text-align: center;
+}
+
+.clothe img {
+    width: 600px;
+}
+
+.results-table {
+    padding: 30px 30px;
 }

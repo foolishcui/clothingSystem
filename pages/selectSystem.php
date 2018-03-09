@@ -1,6 +1,6 @@
 <?php
 require_once '../include.php';
-checkLogined();
+//checkLogined();
 ?>
 
 <!DOCTYPE html>
@@ -54,11 +54,11 @@ checkLogined();
             <div class="system">
                 <article class="post tag-foreign-website tag-bootstrap-v3">
                     <h2 class="post-title">
-                        <a onclick="" href="videoIndex.php">服装设计虚拟展演与评价</a>
+                        <a onclick="" href="videoIndex.php">服装模型展示与评价</a>
                     </h2>
                     <div class="post-featured-image">
                         <a class="thumbnail loaded" onclick="" href="videoIndex.php">
-                            <input type="image" src="http://otzf8g4e3.bkt.clouddn.com/18-1-2/51106961.jpg">
+                            <input type="image" src="http://otzf8g4e3.bkt.clouddn.com/18-3-9/46817500.jpg">
                         </a>
                     </div>
                 </article>

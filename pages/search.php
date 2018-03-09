@@ -1,6 +1,6 @@
 <?php
 require_once '../include.php';
-checkLogined();
+//checkLogined();
 
 //连接数据库
 include('../connectMysql.php');
@@ -192,7 +192,7 @@ setcookie('clothingType', $_GET['search']);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     echo "<tr><td>{$row['id']}</td>" .
-                                        "<td><a href='details.php?id={$row['id']}&table=$typesearch' class='thumbnail'><img src='{$row['image1']}' alt=''></a></td>" .
+                                        "<td><a href='details.php?id={$row['id']}&table=$type' class='thumbnail'><img src='{$row['image1']}' alt=''></a></td>" .
                                         "<td>{$row['color']}</td>" .
                                         "<td>{$row['fabric']}</td>" .
                                         "<td>{$row['style']}</td>" .

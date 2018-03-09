@@ -8,7 +8,7 @@
 
 require_once 'include.php';
 
-//检测是否有submit操作
+//检测是否有 submit 操作
 if(isset($_POST["submit"])){
     //连接数据库
     include('connectMysql.php');

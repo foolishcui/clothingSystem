@@ -1,8 +1,8 @@
 <?php
 //通过COOKIE获取信息，如已登录直接跳转到首页
-if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
-    header("location:index.php");
-}
+//if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
+//    header("location:index.php");
+//}
 ?>
 
 <!DOCTYPE html>
@@ -21,24 +21,28 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
 <body>
 <div class="container-fluid">
 
-    <!--Login Box-->
+    <!--SignUp Box-->
     <div class="loginBox">
         <form class="form-signin" action="../doSignup.php" method="post">
             <h2 class="form-signin-heading">基于感性工学的服装设计虚拟展演与评价系统</h2>
             <label for="inputAccount" class="sr-only">姓名</label>
             <input type="text" name="username" id="inputAccount" class="form-control" placeholder="姓名" required autofocus style="margin-bottom: 10px;">
             <label class="radio-inline">
-                <input type="radio" name="male" id="inputMale" value="male"> 男
+                <input type="radio" name="gender" id="Male" value="Male"> 男
             </label>
             <label class="radio-inline">
-                <input type="radio" name="female" id="inputFemale" value="female"> 女
+                <input type="radio" name="gender" id="Female" value="Female"> 女
             </label>
             <label for="inputAge" class="sr-only">年龄</label>
-            <input type="text" name="age" id="inputAge" class="form-control" placeholder="年龄" required>
+            <input type="text" name="age" id="Age" class="form-control" placeholder="年龄" required>
             <label for="inputJob" class="sr-only">职业</label>
-            <input type="text" name="job" id="inputJob" class="form-control" placeholder="职业" required>
+            <input type="text" name="job" id="Job" class="form-control" placeholder="职业" required>
+            <label for="inputIncome" class="sr-only">月收入</label>
+            <input type="text" name="income" id="Income" class="form-control" placeholder="月收入" required>
+            <label for="inputInterest" class="sr-only">兴趣爱好</label>
+            <input type="text" name="interest" id="Interest" class="form-control" placeholder="兴趣爱好" required>
             <label for="inputPassword" class="sr-only">密码</label>
-            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
+            <input type="password" name="password" id="Password" class="form-control" placeholder="密码" required>
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit">注册</button>
             <div class="form-signup"><a href="login.php">已有账号，前去登陆</a></div>
         </form>
