@@ -55,7 +55,7 @@ setcookie('clothingType', $_GET['search']);
                             while ($row = $result->fetch_assoc()) {
                                 //查询衣服图片
                                 $imageAddress = $row['imageAddress'];
-                                echo "<div class='col-md-2 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
+                                echo "<div class='col-md-3 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
                             }
                         }
                         echo "</div>";
@@ -68,7 +68,7 @@ setcookie('clothingType', $_GET['search']);
                             while ($row = $result->fetch_assoc()) {
                                 //查询衣服图片
                                 $imageAddress = $row['imageAddress'];
-                                echo "<div class='col-md-2 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
+                                echo "<div class='col-md-3 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
                             }
                         }
                         echo "</div>";
@@ -80,7 +80,7 @@ setcookie('clothingType', $_GET['search']);
                             while ($row = $result->fetch_assoc()) {
                                 //查询衣服图片
                                 $imageAddress = $row['imageAddress'];
-                                echo "<div class='col-md-2 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
+                                echo "<div class='col-md-3 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
                             }
                         }
                         echo "</div>";
@@ -93,7 +93,7 @@ setcookie('clothingType', $_GET['search']);
                             while ($row = $result->fetch_assoc()) {
                                 //查询衣服图片
                                 $imageAddress = $row['imageAddress'];
-                                echo "<div class='col-md-2 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
+                                echo "<div class='col-md-3 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
                             }
                         }
                         echo "</div>";
@@ -105,7 +105,7 @@ setcookie('clothingType', $_GET['search']);
                             while ($row = $result->fetch_assoc()) {
                                 //查询衣服图片
                                 $imageAddress = $row['imageAddress'];
-                                echo "<div class='col-md-2 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
+                                echo "<div class='col-md-3 col-sm-6'><a href='evaluationRating.php?imageAddress=$imageAddress' class='thumbnail'><img src='{$row['imageAddress']}' alt=''></a></div>";
                             }
                         }
                         echo "</div>";
